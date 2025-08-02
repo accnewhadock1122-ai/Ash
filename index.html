@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HADOCK ADMIN STORE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    h1 {
+      background: linear-gradient(to right, #00f0ff, #00ffa3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.4rem;
+      margin-top: 30px;
+    }
+
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 10px auto;
+      border: 2px solid #00fff7;
+    }
+
+    .button {
+      margin: 8px;
+      padding: 12px 18px;
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid #00eaff;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
+    }
+
+    .button:hover {
+      background-color: #00eaff;
+      color: #000000;
+      box-shadow: 0 0 12px #00eaff;
+    }
+
+    .service-buttons {
+      margin-top: 20px;
+    }
+
+    .section {
+      display: none;
+      margin-top: 25px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .product {
+      display: inline-block;
+      background-color: #1c1c1c;
+      padding: 12px;
+      margin: 10px;
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,255,255,0.1);
+    }
+
+    .product-title-small {
+      font-size: 0.85rem;
+      color: #0ff;
+      margin-bottom: 5px;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .section-title {
+      color: #00fff7;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HADOCK ADMIN STORE</h1>
+  <img src="your-photo.jpg" alt="Profile" class="profile-pic">
+
+  <div class="service-buttons">
+    <button class="button" onclick="scrollToServices()">Our Services</button><br><br>
+    <button class="button" onclick="showSection('diamond')">Diamond Top Up</button>
+    <button class="button" onclick="showSection('garena')">Garena Shells</button>
+  </div>
+
+  <div id="diamond" class="section">
+    <div class="section-title">DIAMOND TOP UP</div>
+    <div class="product">
+      <div class="product-title-small">60 Diamonds</div>
+      <img src="diamond1.jpg" alt="Diamond 1">
+      <a href="https://wa.me/94XXXXXXXXX?text=Order%20for%2060%20Diamonds">
+        <button class="button">Order Request</button>
+      </a>
+    </div>
+    <div class="product">
+      <div class="product-title-small">120 Diamonds</div>
+      <img src="diamond2.jpg" alt="Diamond 2">
+      <a href="https://wa.me/94XXXXXXXXX?text=Order%20for%20120%20Diamonds">
+        <button class="button">Order Request</button>
+      </a>
+    </div>
+    <div class="product">
+      <div class="product-title-small">240 Diamonds</div>
+      <img src="diamond3.jpg" alt="Diamond 3">
+      <a href="https://wa.me/94XXXXXXXXX?text=Order%20for%20240%20Diamonds">
+        <button class="button">Order Request</button>
+      </a>
+    </div>
+    <div class="product">
+      <div class="product-title-small">530 Diamonds</div>
+      <img src="diamond4.jpg" alt="Diamond 4">
+      <a href="https://wa.me/94XXXXXXXXX?text=Order%20for%20530%20Diamonds">
+        <button class="button">Order Request</button>
+      </a>
+    </div>
+  </div>
+
+  <div id="garena" class="section">
+    <div class="section-title">GARENA SHELLS</div>
+    <div class="product">
+      <div class="product-title-small">Garena 300 Shells</div>
+      <img src="garena1.jpg" alt="Garena 1">
+      <a href="https://wa.me/94XXXXXXXXX?text=Order%20for%20300%20Garena%20Shells">
+        <button class="button">Order Request</button>
+      </a>
+    </div>
+    <div class="product">
+      <div class="product-title-small">Garena 530 Shells</div>
+      <img src="garena2.jpg" alt="Garena 2">
+      <a href="https://wa.me/94XXXXXXXXX?text=Order%20for%20530%20Garena%20Shells">
+        <button class="button">Order Request</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function scrollToServices() {
+      window.scrollBy({ top: 600, behavior: 'smooth' });
+    }
+
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
